@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import config from './configuration/config';
 import { MongoClient } from './shared/persistence/MongoCliente';
 import { environments } from './configuration/environments';
+import { RoutesModule } from './routes/routes.module';
 
 @Module({
   imports: [
@@ -21,6 +22,8 @@ import { environments } from './configuration/environments';
 
     //? Shared module
     SharedModule,
+
+    RoutesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
